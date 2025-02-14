@@ -9,13 +9,15 @@ import bodyParser from 'body-parser';
 import admin from 'firebase-admin';
 import schedule from 'node-schedule';
 import cors from 'cors';
+import fs from 'fs';
 
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
 // Initialize Firebase Admin SDK
-const serviceAccount = require('./serviceAccountKey.json');
+const serviceAccount = JSON.parse(fs.readFileSync('./serviceAccountKey.json', 'utf8'));
+
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: 'https://testfcm-6cb6f.firebaseio.com'
