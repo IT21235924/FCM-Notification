@@ -1,8 +1,14 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const admin = require('firebase-admin');
-const schedule = require('node-schedule');
-const cors = require('cors');
+// const express = require('express');
+// const bodyParser = require('body-parser');
+// const admin = require('firebase-admin');
+// const schedule = require('node-schedule');
+// const cors = require('cors');
+
+import express from 'express';
+import bodyParser from 'body-parser';
+import admin from 'firebase-admin';
+import schedule from 'node-schedule';
+import cors from 'cors';
 
 const app = express();
 app.use(bodyParser.json());
