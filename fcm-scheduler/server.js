@@ -1,9 +1,3 @@
-// const express = require('express');
-// const bodyParser = require('body-parser');
-// const admin = require('firebase-admin');
-// const schedule = require('node-schedule');
-// const cors = require('cors');
-
 import express from 'express';
 import bodyParser from 'body-parser';
 import admin from 'firebase-admin';
